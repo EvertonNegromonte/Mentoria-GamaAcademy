@@ -1,0 +1,52 @@
+/*fundo de tela, background-color: aliceblue; para cor de fundo ou background-image: url(1018.png);*/
+
+body
+{
+  background-image:url(imagens/1018.png);  
+  background-size: 1800px;
+  background-repeat: no-repeat;
+}
+
+/*Primeira forma de fazer um estilo nativo*/
+h1
+{
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+color: brown;
+}
+
+/*Segunda forma, criando class*/
+.classe_especial
+{
+   background-color: rgb(0, 0, 0);
+   color: bisque;
+   font-size: 16px;
+   font: bolder; 
+}
+
+/*estilo do cadastro*/
+.formatacao_campos
+{
+background-color: rgb(201, 213, 223);
+color: rgb(1, 1, 1);
+font-size: 12px;
+font: bolder;
+}
+
+/*Terceira forma, estilo pra id*/
+#cadastro
+{
+color:darkorange;
+font-size: 19px;
+}
+
+/*criando um padrao de tamanho para o formulaeio*/
+.campo_nome
+{
+ width: 200px;
+ background-color: rgb(205, 212, 212);
+}
+.campo_email
+{
+ width: 200px;
+ background-color: rgb(196, 196, 196);
+}

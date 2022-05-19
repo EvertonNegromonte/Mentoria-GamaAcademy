@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relogio com JavaScript</title>
+</head>
+<body>
+    <h1 id="hora"></h1>
+<script>
+    //setInterval pega intervalo da função
+    setInterval(function(){
+
+//new date ele peaga a data e hora atual do pc
+let novaHora = new Date();
+// lecarar 3 variaveis hora,min,segundo
+let hora = novaHora.getHours();
+let minuto = novaHora.getMinutes();
+let segundo = novaHora.getSeconds();
+
+minuto=zero(minuto);
+segundo=zero(segundo);
+
+//permite mostrar o conteudo em tempo real
+document.getElementById('hora').textContent = hora+":"+minuto+":"+segundo;},1000)
+
+function zero(contador) {
+    if (contador< 10) { 
+        contador= '0' + contador;
+    } return contador;
+}
+
+
+</script>
+
+    
+</body>
+</html>

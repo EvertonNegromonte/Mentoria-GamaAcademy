@@ -1,0 +1,109 @@
+Funções JS para executar no Node
+
+==============
+soma.js
+// Criando as variáveis e inserindo valores
+let valor1=3020
+let valor2=1000
+
+function soma(x,y){
+    return x+y
+}
+console.log(soma(valor1,valor2))
+
+================================
+apresenta_nome.js
+
+var nome ="Ricardo Alexandre";
+var sobrenome="Bontempo";
+
+console.log(nome+" "+sobrenome);
+
+
+=================================
+bemvindo.js
+console.log("Olá seja bem vindo a nossa aula de JavaScript com NodesJS");
+
+
+===== Mostrando registros em uma variável nome 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Processos com JavaScript</title>
+</head>
+<body>
+    <!--Desenvolvendo um script em JS, para fazer um laço de repetição-->
+    <h3>Criando um laço de repetição com FOR</h3>
+
+    <p id="retorno"></p>
+
+    <script>
+        // Criando uma variável do tipo constante com um laço de repetição
+        const nomes =["Bruna","Cristina","Luciana","Nicole","Wagner","André"];
+    
+        //Declarando uma variável de retorno
+        let texto="";
+
+        //Criando o laço de repetição
+        
+        //Mostrando o registro desejado com base no seletor
+        //texto+=nomes[2]+"<br>";
+
+        // Atribui o resultado da minha variável constante para uma variável local2
+        for(let contador=0; contador<6; contador++){
+           texto+=nomes[contador]+"<br>"; 
+           // alert(nomes[contador]);
+
+        };
+
+        //Inserindo o conteúdo de uma variável para o nosso parágrafo
+        document.getElementById("retorno").innerHTML=texto;
+        
+        
+
+    </script>
+    
+</body>
+</html>
+
+
+===== Criando um relógio em HTML com JavaScript
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Relógio</title>
+</head>
+<body>
+    <h3 id="hora"></h3>
+    <script>
+        setInterval(function(){
+    
+    let novaHora = new Date();
+  
+    let hora = novaHora.getHours();
+    let minuto = novaHora.getMinutes();
+    let segundo = novaHora.getSeconds();
+   
+    minuto = zero(minuto);
+    segundo = zero(segundo);
+    
+    document.getElementById('hora').textContent = hora+':'+minuto+':'+segundo;},1000)
+
+
+
+function zero(x) {
+    if (x< 10) { 
+        x= '0' + x;
+    } return x;
+}
+    </script>
+</body>
+</html>

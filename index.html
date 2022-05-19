@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Colocar a pasta css com:<link rel="stylesheet" href="Style.css"> ou para voltar na pasta ..
+    <link href="../NOMEDAPASTA/stlyle.css"> real arquivo interno href arquivo externo-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentoria Semana 1</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+
+
+<body>
+<h1>Testando o estilo nativo</h1>   
+<h1 class="classe_especial">Testando o segundo estilo</h1>
+
+<!--Criando um formulario-->
+<!--placeholder são as inf dentro da caixinha-->
+<!--required e <input type="submit" value="Enviar"> tem um melhor preencimento-->
+<!--Quantidade de caracters-->
+<!--Mendagem no formulario// oninvalid="this.setCustomValidity('Camopo Obrigatorio')"onchange="try"{setCustomValidity('')}catch(e){}""-->
+<form id="cadastro" method="post">
+    <label>Nome  Aluno:</label>
+    <input type="text" name="nome_aluno" class="campo_nome" placeholder="Digite seu nome" required maxlength="100" ><br><br>
+    <label>Email Aluno:</label>
+    <input type="email" name="emil_aluno" class="campo_email" placeholder="Digite o seu email" required>
+    <br>
+    <input type="submit" value="Enviar">
+</form>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

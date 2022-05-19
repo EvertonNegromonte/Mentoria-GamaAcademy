@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentoria JavaScript</title>
+
+    <script>
+    // var nome;  esta vasia, tem que por algo nela
+    /*var nome = prompt("Digite seu nome");
+    alert("Seja bem vindo  " + nome);
+    //criando a peimeira função em javaScript*/
+    //function menssagem(){
+        //alert ('oi curioso');
+    //}
+    function validacao(){
+        var nome  = form_cad.nome_usuario.value;
+        var email = form_cad.email_usuario.value;
+        var senha = form_cad.senha_usuario.value;
+        var reptsenha = form_cad.reptsenha_usuario.value;
+
+        var retorno = document.getElementById("retorno").innerHTML;
+        // para o conteudo retotnar na pg HTML innerHTML
+        //pegar o contexto do ID getElementById + mais nome do id e, "" se for string
+
+        //alert(nome);
+        //validação do campo nome
+        //value é pra capturar o valor
+        // pra caser um E use ||
+        // pega um caracter desejado indexOf
+        if(nome== ""  ){
+            alert ("O preenchimento desse campo é obrigatório");
+            //escoler a estrutura do formulario, informar o local que o cursos vai parar e .focus
+            form_cad.nome_usuario.focus();
+            return false;
+            //return para obrigar a pessao a escrever algo, por o return no onclick validacao
+        }
+        //validação do campo email
+        if(email =="" || email.indexOf('@') == -1 ){
+            alert("O preenchimento desse campo é obrigatório");
+            form_cad.email_usuario.focus();
+            return false;
+        }
+        //validação do campo senha
+        if(senha ==""){
+            alert("O preenchimento desse campo é obrigatório");
+            form_cad.senha_usuario.focus();
+            return false;
+        }
+        //validação do campo Repetir senha
+        // se o reptsenha for diferente != 
+        if(reptsenha != senha){
+            alert ('As senhas devem ser as mesmas')
+            form_cad.reptsenha_usuario.focus();
+            return false;
+        }
+        else{
+            alert ('Senhas corretas');
+        }
+
+        //document.writeln("Presado(a)" + none  + "seja bem vindo(a)");
+    }
+
+
+    </script>
+
+
+
+</head>
+<body>
+    <h>Mentoria JavaScript</h><br><br>
+<!--Estrutura de formulario-->
+<!--method é o metodo / Post  ele encapsula e manda pro cód font / get manda pra url-->
+<form id="form_cad" method="post">
+    <!--fieldset permite cirar uma caixa agregando os campos -->
+<fieldset>
+    <!--Criar legenda -->
+<legend>Preencha os campos abaixos, para mais informções</legend>
+<br>
+<lebel>Nome:</lebel>
+<input type="text" name= "nome_usuario"> <br><br>
+<lebel>Email:</lebel>
+<input type="text" name= "email_usuario"><br><br>
+<lebel>Senha:</lebel>
+<input type="password" name= "senha_usuario"><br><br>
+<lebel>Repetir Senha:</lebel>
+<input type="password" name= "reptsenha_usuario"><br><br>
+<!-- Botão para enviar os canpos preenchidos -->
+<!-- bubmit vai pegar  e enviar pro java  -->
+<input type="submit" onclick=" return validacao()" value="Enviar"> <br><br>
+<!-- para envocar a função -->
+<!--<input type="button"  onclick="menssagem()" value="Me Click"><br><br>-->
+</fieldset>
+<!-- -->
+</form>
+<p id="retorno"></p>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processos dos JavaScript</title>
+</head>
+
+<body>
+    <!--Laço de repetição com FOR-->
+    <h3>Laço de repetição</h3>
+    <p id="retorno"></p>
+
+    <script>
+        // Criando variavel do tipo constante com um laço de repetição
+        const nomes=["Everton","Lili","Iva","Tio","Vania"];
+
+        //Declarando variavel de retotno
+        // Inserindo o conteudo de uma variavel local no paragrafo 'retorno'
+        //colocar o nome do Id getElementById
+        // para o conteudo retotnar na pg HTML innerHTML
+        //nostrando o registro desejado com base no seletor
+        /*let texto="";
+        texto+=nomes[1]+"<br>";
+        document.getElementById('retorno').innerHTML=texto;*/
+
+        //Criando o laço de repetiçao
+        // cont é contador
+        // Atribuindo o resultado da variavel constante para um variavel local
+        let texto="";
+        for(let contador=0; contador<5; contador++){
+            texto+=nomes[contador]+"<br>";
+            alert(nomes[contador]);
+        };
+
+        document.getElementById("retorno").innerHTML=texto;
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
